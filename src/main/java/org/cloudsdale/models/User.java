@@ -2,8 +2,6 @@ package org.cloudsdale.models;
 
 import com.google.gson.annotations.SerializedName;
 
-import org.cloudsdale.android.models.IdentityModel;
-
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -44,6 +42,7 @@ public class User extends IdentityModel {
 
 	// protected attributes from JSON
 	protected String			name;
+	protected String			username;
 	protected String			email;
 	@SerializedName("skype_name")
 	protected String			skypeName;
@@ -99,199 +98,207 @@ public class User extends IdentityModel {
 		this.clouds = clouds;
 	}
 
-    public String getTAG() {
-        return TAG;
+	public String getTAG() {
+		return TAG;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getSkypeName() {
+		return skypeName;
+	}
+
+	public void setSkypeName(String skypeName) {
+		this.skypeName = skypeName;
+	}
+
+	public boolean isInvisible() {
+		return invisible;
+	}
+
+	public void setInvisible(boolean invisible) {
+		this.invisible = invisible;
+	}
+
+	public String getTimeZone() {
+		return timeZone;
+	}
+
+	public void setTimeZone(String timeZone) {
+		this.timeZone = timeZone;
+	}
+
+	public Date getMemberSince() {
+		return memberSince;
+	}
+
+	public void setMemberSince(Date memberSince) {
+		this.memberSince = memberSince;
+	}
+
+	public Date getSuspendedUntil() {
+		return suspendedUntil;
+	}
+
+	public void setSuspendedUntil(Date suspendedUntil) {
+		this.suspendedUntil = suspendedUntil;
+	}
+
+	public String getReasonForSuspension() {
+		return reasonForSuspension;
+	}
+
+	public void setReasonForSuspension(String reasonForSuspension) {
+		this.reasonForSuspension = reasonForSuspension;
+	}
+
+	public Avatar getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(Avatar avatar) {
+		this.avatar = avatar;
+	}
+
+	public boolean isRegistered() {
+		return isRegistered;
+	}
+
+	public void setRegistered(boolean registered) {
+		isRegistered = registered;
+	}
+
+	public boolean isTransientStatus() {
+		return transientStatus;
+	}
+
+	public void setTransientStatus(boolean transientStatus) {
+		this.transientStatus = transientStatus;
+	}
+
+	public boolean isBanStatus() {
+		return banStatus;
+	}
+
+	public void setBanStatus(boolean banStatus) {
+		this.banStatus = banStatus;
+	}
+
+	public boolean isMemberOfACloud() {
+		return memberOfACloud;
+	}
+
+	public void setMemberOfACloud(boolean memberOfACloud) {
+		this.memberOfACloud = memberOfACloud;
+	}
+
+	public boolean isHasAvatar() {
+		return hasAvatar;
+	}
+
+	public void setHasAvatar(boolean hasAvatar) {
+		this.hasAvatar = hasAvatar;
+	}
+
+	public boolean isHasReadTnC() {
+		return hasReadTnC;
+	}
+
+	public void setHasReadTnC(boolean hasReadTnC) {
+		this.hasReadTnC = hasReadTnC;
+	}
+
+	public Role getUserRole() {
+		return userRole;
+	}
+
+	public Prosecution[] getProsecutions() {
+		return prosecutions;
+	}
+
+	public void setProsecutions(Prosecution[] prosecutions) {
+		this.prosecutions = prosecutions;
+	}
+
+	public String getAuthToken() {
+		return authToken;
+	}
+
+	public void setAuthToken(String authToken) {
+		this.authToken = authToken;
+	}
+
+	public boolean isNeedsToConfirmRegistration() {
+		return needsToConfirmRegistration;
+	}
+
+	public void setNeedsToConfirmRegistration(boolean needsToConfirmRegistration) {
+		this.needsToConfirmRegistration = needsToConfirmRegistration;
+	}
+
+	public boolean isNeedsToChangePassword() {
+		return needsToChangePassword;
+	}
+
+	public void setNeedsToChangePassword(boolean needsToChangePassword) {
+		this.needsToChangePassword = needsToChangePassword;
+	}
+
+	public boolean isNeedsToChangeName() {
+		return needsToChangeName;
+	}
+
+	public void setNeedsToChangeName(boolean needsToChangeName) {
+		this.needsToChangeName = needsToChangeName;
+	}
+
+	public Date getConfirmedRegistrationAt() {
+		return confirmedRegistrationAt;
+	}
+
+	public void setConfirmedRegistrationAt(Date confirmedRegistrationAt) {
+		this.confirmedRegistrationAt = confirmedRegistrationAt;
+	}
+
+	public Date getTncLastAccepted() {
+		return tncLastAccepted;
+	}
+
+	public void setTncLastAccepted(Date tncLastAccepted) {
+		this.tncLastAccepted = tncLastAccepted;
+	}
+
+	public ArrayList<Cloud> getClouds() {
+		return clouds;
+	}
+
+	public Ban[] getBans() {
+		return bans;
+	}
+
+	public void setBans(Ban[] bans) {
+		this.bans = bans;
+	}
+
+    public String getUsername() {
+        return username;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getSkypeName() {
-        return skypeName;
-    }
-
-    public void setSkypeName(String skypeName) {
-        this.skypeName = skypeName;
-    }
-
-    public boolean isInvisible() {
-        return invisible;
-    }
-
-    public void setInvisible(boolean invisible) {
-        this.invisible = invisible;
-    }
-
-    public String getTimeZone() {
-        return timeZone;
-    }
-
-    public void setTimeZone(String timeZone) {
-        this.timeZone = timeZone;
-    }
-
-    public Date getMemberSince() {
-        return memberSince;
-    }
-
-    public void setMemberSince(Date memberSince) {
-        this.memberSince = memberSince;
-    }
-
-    public Date getSuspendedUntil() {
-        return suspendedUntil;
-    }
-
-    public void setSuspendedUntil(Date suspendedUntil) {
-        this.suspendedUntil = suspendedUntil;
-    }
-
-    public String getReasonForSuspension() {
-        return reasonForSuspension;
-    }
-
-    public void setReasonForSuspension(String reasonForSuspension) {
-        this.reasonForSuspension = reasonForSuspension;
-    }
-
-    public Avatar getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(Avatar avatar) {
-        this.avatar = avatar;
-    }
-
-    public boolean isRegistered() {
-        return isRegistered;
-    }
-
-    public void setRegistered(boolean registered) {
-        isRegistered = registered;
-    }
-
-    public boolean isTransientStatus() {
-        return transientStatus;
-    }
-
-    public void setTransientStatus(boolean transientStatus) {
-        this.transientStatus = transientStatus;
-    }
-
-    public boolean isBanStatus() {
-        return banStatus;
-    }
-
-    public void setBanStatus(boolean banStatus) {
-        this.banStatus = banStatus;
-    }
-
-    public boolean isMemberOfACloud() {
-        return memberOfACloud;
-    }
-
-    public void setMemberOfACloud(boolean memberOfACloud) {
-        this.memberOfACloud = memberOfACloud;
-    }
-
-    public boolean isHasAvatar() {
-        return hasAvatar;
-    }
-
-    public void setHasAvatar(boolean hasAvatar) {
-        this.hasAvatar = hasAvatar;
-    }
-
-    public boolean isHasReadTnC() {
-        return hasReadTnC;
-    }
-
-    public void setHasReadTnC(boolean hasReadTnC) {
-        this.hasReadTnC = hasReadTnC;
-    }
-
-    public Role getUserRole() {
-        return userRole;
-    }
-
-    public Prosecution[] getProsecutions() {
-        return prosecutions;
-    }
-
-    public void setProsecutions(Prosecution[] prosecutions) {
-        this.prosecutions = prosecutions;
-    }
-
-    public String getAuthToken() {
-        return authToken;
-    }
-
-    public void setAuthToken(String authToken) {
-        this.authToken = authToken;
-    }
-
-    public boolean isNeedsToConfirmRegistration() {
-        return needsToConfirmRegistration;
-    }
-
-    public void setNeedsToConfirmRegistration(boolean needsToConfirmRegistration) {
-        this.needsToConfirmRegistration = needsToConfirmRegistration;
-    }
-
-    public boolean isNeedsToChangePassword() {
-        return needsToChangePassword;
-    }
-
-    public void setNeedsToChangePassword(boolean needsToChangePassword) {
-        this.needsToChangePassword = needsToChangePassword;
-    }
-
-    public boolean isNeedsToChangeName() {
-        return needsToChangeName;
-    }
-
-    public void setNeedsToChangeName(boolean needsToChangeName) {
-        this.needsToChangeName = needsToChangeName;
-    }
-
-    public Date getConfirmedRegistrationAt() {
-        return confirmedRegistrationAt;
-    }
-
-    public void setConfirmedRegistrationAt(Date confirmedRegistrationAt) {
-        this.confirmedRegistrationAt = confirmedRegistrationAt;
-    }
-
-    public Date getTncLastAccepted() {
-        return tncLastAccepted;
-    }
-
-    public void setTncLastAccepted(Date tncLastAccepted) {
-        this.tncLastAccepted = tncLastAccepted;
-    }
-
-    public ArrayList<Cloud> getClouds() {
-        return clouds;
-    }
-
-    public Ban[] getBans() {
-        return bans;
-    }
-
-    public void setBans(Ban[] bans) {
-        this.bans = bans;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

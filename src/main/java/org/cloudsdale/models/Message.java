@@ -2,8 +2,6 @@ package org.cloudsdale.models;
 
 import java.util.Date;
 
-import org.cloudsdale.android.models.Model;
-
 import com.google.gson.annotations.SerializedName;
 
 public class Message extends Model {

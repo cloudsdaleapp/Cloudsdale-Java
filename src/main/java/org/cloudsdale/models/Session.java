@@ -2,8 +2,6 @@ package org.cloudsdale.models;
 
 import com.google.gson.annotations.SerializedName;
 
-import org.cloudsdale.android.models.Model;
-
 public class Session extends Model {
 
 	@SerializedName("client_id")

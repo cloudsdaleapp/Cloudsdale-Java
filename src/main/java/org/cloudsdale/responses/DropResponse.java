@@ -1,6 +1,6 @@
 package org.cloudsdale.responses;
 
-import org.cloudsdale.android.models.api.Drop;
+import org.cloudsdale.models.Drop;
 
 import java.util.ArrayList;
 

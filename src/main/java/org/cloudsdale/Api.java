@@ -20,7 +20,7 @@ import retrofit.http.Path;
  */
 public interface Api {
 
-    String BASE_URL = "https://www.cloudsdale.org/v1";
+    String BASE_URL = "http://www.cloudsdale.org/v1";
 
     /**
      * Synchronously gets a user by ID
@@ -80,7 +80,7 @@ public interface Api {
 
         public Api build() {
             Gson gson = new GsonBuilder()
-                    .setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
+                    .setDateFormat("yyyy/MM/dd HH:mm:ss Z")
                     .create();
             return new RestAdapter.Builder()
                     .setConverter(new GsonConverter(gson))

@@ -1,6 +1,6 @@
 package org.cloudsdale.responses;
 
-import org.cloudsdale.android.models.api.Message;
+import org.cloudsdale.models.Message;
 
 import java.util.ArrayList;
 

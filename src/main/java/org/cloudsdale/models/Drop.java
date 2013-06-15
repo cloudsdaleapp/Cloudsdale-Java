@@ -1,7 +1,5 @@
 package org.cloudsdale.models;
 
-import org.cloudsdale.android.models.IdentityModel;
-
 public class Drop extends IdentityModel {
     
     private String url;

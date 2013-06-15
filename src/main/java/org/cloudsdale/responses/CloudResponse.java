@@ -1,6 +1,6 @@
 package org.cloudsdale.responses;
 
-import org.cloudsdale.android.models.api.Cloud;
+import org.cloudsdale.models.Cloud;
 
 import java.util.ArrayList;
 

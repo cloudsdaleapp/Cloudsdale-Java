@@ -1,6 +1,6 @@
 package org.cloudsdale.responses;
 
-import org.cloudsdale.android.models.api.Session;
+import org.cloudsdale.models.Session;
 
 public class SessionResponse extends Response {
 	

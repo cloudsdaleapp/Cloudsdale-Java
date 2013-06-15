@@ -2,8 +2,6 @@ package org.cloudsdale.models;
 
 import java.util.ArrayList;
 
-import org.cloudsdale.android.models.Model;
-
 public class Chat extends Model {
 
     private Cloud				cloud;

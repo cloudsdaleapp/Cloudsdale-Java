@@ -1,7 +1,5 @@
 package org.cloudsdale.models;
 
-import org.cloudsdale.android.models.Model;
-
 public class Flash extends Model {
 	
 	private String	message;

@@ -1,7 +1,6 @@
 package org.cloudsdale.responses;
 
-import org.cloudsdale.android.models.api.Error;
-import org.cloudsdale.android.models.api.Flash;
+import org.cloudsdale.models.Flash;
 
 /**
  * Response bean for easy GSON (de)serialization
@@ -12,7 +11,7 @@ public class Response {
 	
 	protected int		status;
 	protected Error[]	errors;
-	protected Flash		flash;
+	protected Flash flash;
 
     public int getStatus() {
         return status;

@@ -2,8 +2,6 @@ package org.cloudsdale.models;
 
 import com.google.gson.annotations.SerializedName;
 
-import org.cloudsdale.android.models.IdentityModel;
-
 import java.util.Date;
 
 public class Cloud extends IdentityModel {

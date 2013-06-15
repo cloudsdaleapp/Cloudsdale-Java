@@ -1,7 +1,5 @@
 package org.cloudsdale.models;
 
-import org.cloudsdale.android.models.Model;
-
 import com.google.gson.annotations.SerializedName;
 
 public class Error extends Model {
