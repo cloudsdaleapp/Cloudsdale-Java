@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/cloudsdaleapp/Cloudsdale-Java.png)](https://travis-ci.org/cloudsdaleapp/Cloudsdale-Java)
