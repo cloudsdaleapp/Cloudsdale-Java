@@ -2,26 +2,26 @@ package org.cloudsdale.responses;
 
 import org.cloudsdale.models.User;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class UserResponse extends Response {
 
-	private User result;
-	private ArrayList<User> results;
+	private User		result;
+	private List<User>	results;
 
-    public User getResult() {
-        return result;
-    }
+	public User getResult() {
+		return result;
+	}
 
-    public void setResult(User result) {
-        this.result = result;
-    }
+	public void setResult(User result) {
+		this.result = result;
+	}
 
-    public ArrayList<User> getResults() {
-        return results;
-    }
+	public List<User> getResults() {
+		return results;
+	}
 
-    public void setResults(ArrayList<User> results) {
-        this.results = results;
-    }
+	public void setResults(List<User> results) {
+		this.results = results;
+	}
 }

@@ -2,8 +2,8 @@ package org.cloudsdale.models;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * User model for Cloudsdale
@@ -38,53 +38,53 @@ public class User extends IdentityModel {
 
 	}
 
-	protected final String		TAG	= "Cloudsdale User";
+	protected final String	TAG	= "Cloudsdale User";
 
 	// protected attributes from JSON
-	protected String			name;
-	protected String			username;
-	protected String			email;
+	protected String		name;
+	protected String		username;
+	protected String		email;
 	@SerializedName("skype_name")
-	protected String			skypeName;
-	protected boolean			invisible;
+	protected String		skypeName;
+	protected boolean		invisible;
 	@SerializedName("time_zone")
-	protected String			timeZone;
+	protected String		timeZone;
 	@SerializedName("member_since")
-	protected Date				memberSince;
+	protected Date			memberSince;
 	@SerializedName("suspended_until")
-	protected Date				suspendedUntil;
+	protected Date			suspendedUntil;
 	@SerializedName("reason_for_suspension")
-	protected String			reasonForSuspension;
-	protected Avatar			avatar;
+	protected String		reasonForSuspension;
+	protected Avatar		avatar;
 	@SerializedName("is_registered")
-	protected boolean			isRegistered;
+	protected boolean		isRegistered;
 	@SerializedName("is_transient")
-	protected boolean			transientStatus;
+	protected boolean		transientStatus;
 	@SerializedName("is_banned")
-	protected boolean			banStatus;
+	protected boolean		banStatus;
 	@SerializedName("is_member_of_a_cloud")
-	protected boolean			memberOfACloud;
+	protected boolean		memberOfACloud;
 	@SerializedName("has_an_avatar")
-	protected boolean			hasAvatar;
+	protected boolean		hasAvatar;
 	@SerializedName("has_read_tnc")
-	protected boolean			hasReadTnC;
+	protected boolean		hasReadTnC;
 	@SerializedName("role")
-	protected Role				userRole;
-	protected Prosecution[]		prosecutions;
+	protected Role			userRole;
+	protected Prosecution[]	prosecutions;
 	@SerializedName("auth_token")
-	protected String			authToken;
+	protected String		authToken;
 	@SerializedName("needs_to_confirm_registration")
-	protected boolean			needsToConfirmRegistration;
+	protected boolean		needsToConfirmRegistration;
 	@SerializedName("needs_password_change")
-	protected boolean			needsToChangePassword;
+	protected boolean		needsToChangePassword;
 	@SerializedName("needs_name_change")
-	protected boolean			needsToChangeName;
+	protected boolean		needsToChangeName;
 	@SerializedName("confirmed_registration_at")
-	protected Date				confirmedRegistrationAt;
+	protected Date			confirmedRegistrationAt;
 	@SerializedName("tnc_last_accepted")
-	protected Date				tncLastAccepted;
-	protected ArrayList<Cloud>	clouds;
-	protected Ban[]				bans;
+	protected Date			tncLastAccepted;
+	protected List<Cloud>	clouds;
+	protected Ban[]			bans;
 
 	public void setUserRole(Role role) {
 		this.userRole = role;
@@ -94,7 +94,7 @@ public class User extends IdentityModel {
 		clouds.add(cloud);
 	}
 
-	public void setClouds(ArrayList<Cloud> clouds) {
+	public void setClouds(List<Cloud> clouds) {
 		this.clouds = clouds;
 	}
 
@@ -282,7 +282,7 @@ public class User extends IdentityModel {
 		this.tncLastAccepted = tncLastAccepted;
 	}
 
-	public ArrayList<Cloud> getClouds() {
+	public List<Cloud> getClouds() {
 		return clouds;
 	}
 
@@ -294,11 +294,11 @@ public class User extends IdentityModel {
 		this.bans = bans;
 	}
 
-    public String getUsername() {
-        return username;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 }

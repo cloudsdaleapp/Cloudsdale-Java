@@ -1,11 +1,11 @@
 package org.cloudsdale.models;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Chat extends Model {
 
     private Cloud				cloud;
-    private ArrayList<Message>	messages;
+    private List<Message>	messages;
     private String				token;
 
     public Cloud getCloud() {
@@ -16,11 +16,11 @@ public class Chat extends Model {
         this.cloud = cloud;
     }
 
-    public ArrayList<Message> getMessages() {
+    public List<Message> getMessages() {
         return messages;
     }
 
-    public void setMessages(ArrayList<Message> messages) {
+    public void setMessages(List<Message> messages) {
         this.messages = messages;
     }
 
