@@ -24,7 +24,7 @@ import java.io.IOException;
 @RunWith(JUnit4.class)
 public class RetrofitTest extends TestCase {
 
-    // TODO FIXME Mock out the client and test!
+    // TODO Mock out the client and test!
 
 	private static final String	AUTH_TOKEN				= "SOME SUPER SECRET AWESOME KEY";
 	private static final String	DEBUG_USER_ID			= "awesome user id";

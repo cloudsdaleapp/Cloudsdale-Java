@@ -30,6 +30,14 @@ public interface V1 {
 
     String BASE_URL = "http://www.cloudsdale.org/v1";
 
+    //region >> SESSION RESOURCES
+
+    // FIXME Create sessions
+
+    // FIXME Renew sessions
+
+    //endregion
+
     //region >> USER RESOURCES
 
     /**
