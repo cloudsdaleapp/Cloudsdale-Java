@@ -15,8 +15,8 @@ import retrofit.RequestHeaders;
 import retrofit.RestAdapter;
 import retrofit.client.Header;
 import retrofit.converter.GsonConverter;
-import retrofit.http.GET;
-import retrofit.http.Path;
+import retrofit.http.*;
+import retrofit.mime.TypedFile;
 
 /**
  * The API contract for the Cloudsdale.org API v1, describes all the HTTP actions <br/>
@@ -28,7 +28,7 @@ import retrofit.http.Path;
 @Deprecated
 public interface V1 {
 
-    String BASE_URL = "http://www.cloudsdale.org/v1";
+    String BASE_URL = "https://www.cloudsdale.org/v1";
 
     //region >> SESSION RESOURCES
 
@@ -57,6 +57,32 @@ public interface V1 {
      */
     @GET("/users/{id}.json")
     public void getUser(@Path("id") String id, Callback<UserResponse> callback);
+
+    /**
+     * Synchronously gets a user's clouds
+     *
+     * @param id The user's ID
+     * @return A {@link CloudResponse} containing either errors or the user's clouds
+     */
+    @GET("/users/{id}/clouds.json")
+    public CloudResponse getCloudsForUser(@Path("id") String id);
+
+    /**
+     * Asynchronously gets a user's clouds
+     *
+     * @param id       The user's ID
+     * @param callback Asynchronous callback to handle response
+     */
+    @GET("/users/{id}/clouds.json")
+    public void getCloudsForUser(@Path("id") String id, Callback<CloudResponse> callback);
+
+    @Multipart
+    @POST("/users/{id}.json")
+    public UserResponse uploadAvatarForUser(@Path("id")String id, @Part("user[avatar]")TypedFile avatar);
+
+    @Multipart
+    @POST("/users/{id}.json")
+    public void uploadAvatarForUser(@Path("id")String id, @Part("user[avatar]")TypedFile avatar, Callback<UserResponse> callback);
 
     //endregion
 
