@@ -1,6 +1,6 @@
 package org.cloudsdale.responses;
 
-import org.cloudsdale.models.User;
+import org.cloudsdale.models.v1.User;
 
 import java.util.List;
 

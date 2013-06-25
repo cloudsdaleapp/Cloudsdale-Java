@@ -1,6 +1,6 @@
 package org.cloudsdale.responses;
 
-import org.cloudsdale.models.Ban;
+import org.cloudsdale.models.v1.Ban;
 
 import java.util.List;
 

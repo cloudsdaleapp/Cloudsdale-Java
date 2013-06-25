@@ -1,4 +1,4 @@
-package org.cloudsdale.models;
+package org.cloudsdale.models.v1;
 
 public class Flash extends Model {
 	

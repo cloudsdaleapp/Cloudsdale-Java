@@ -1,6 +1,6 @@
 package org.cloudsdale.responses;
 
-import org.cloudsdale.models.Flash;
+import org.cloudsdale.models.v1.Flash;
 
 /**
  * Response bean for easy GSON (de)serialization

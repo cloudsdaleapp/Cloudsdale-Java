@@ -1,6 +1,6 @@
 package org.cloudsdale.responses;
 
-import org.cloudsdale.models.Session;
+import org.cloudsdale.models.v1.Session;
 
 public class SessionResponse extends Response {
 	

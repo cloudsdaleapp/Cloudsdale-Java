@@ -1,4 +1,4 @@
-package org.cloudsdale.models;
+package org.cloudsdale.models.v1;
 
 import java.util.Date;
 

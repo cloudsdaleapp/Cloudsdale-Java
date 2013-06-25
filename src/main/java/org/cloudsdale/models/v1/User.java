@@ -1,4 +1,4 @@
-package org.cloudsdale.models;
+package org.cloudsdale.models.v1;
 
 import com.google.gson.annotations.SerializedName;
 

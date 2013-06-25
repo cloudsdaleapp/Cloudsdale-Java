@@ -1,4 +1,4 @@
-package org.cloudsdale.models;
+package org.cloudsdale.models.v1;
 
 /**
  * Model class to pass on identity properties to child models
