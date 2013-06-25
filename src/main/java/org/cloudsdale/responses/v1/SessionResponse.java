@@ -1,4 +1,4 @@
-package org.cloudsdale.responses;
+package org.cloudsdale.responses.v1;
 
 import org.cloudsdale.models.v1.Session;
 

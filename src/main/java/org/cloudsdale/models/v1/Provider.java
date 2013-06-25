@@ -1,4 +1,4 @@
-package org.cloudsdale.responses;
+package org.cloudsdale.models.v1;
 
 public enum Provider {
 	//@formatter:off

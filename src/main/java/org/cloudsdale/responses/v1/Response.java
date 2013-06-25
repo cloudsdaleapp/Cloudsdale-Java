@@ -1,4 +1,4 @@
-package org.cloudsdale.responses;
+package org.cloudsdale.responses.v1;
 
 import org.cloudsdale.models.v1.Flash;
 
@@ -7,7 +7,7 @@ import org.cloudsdale.models.v1.Flash;
  * 
  * @author Jamison Greeley (atomicrat2552@gmail.com)
  */
-public class Response {
+public abstract class Response {
 	
 	protected int		status;
 	protected Error[]	errors;

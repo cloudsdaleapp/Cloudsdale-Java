@@ -3,9 +3,9 @@ package org.cloudsdale.api;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import org.cloudsdale.responses.CloudResponse;
-import org.cloudsdale.responses.DropResponse;
-import org.cloudsdale.responses.UserResponse;
+import org.cloudsdale.responses.v1.CloudResponse;
+import org.cloudsdale.responses.v1.DropResponse;
+import org.cloudsdale.responses.v1.UserResponse;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,10 +23,14 @@ import retrofit.http.Path;
  * Copyright (c) 2013 Cloudsdale.org
  *
  * @author Berwyn Codeweaver <berwyn.codeweaver@gmail.com>
+ * @see <a href="https://dev.cloudsdale.org/">Developer Documentation</a>
  */
+@Deprecated
 public interface V1 {
 
     String BASE_URL = "http://www.cloudsdale.org/v1";
+
+    //region >> USER RESOURCES
 
     /**
      * Synchronously gets a user by ID
@@ -46,6 +50,10 @@ public interface V1 {
     @GET("/users/{id}.json")
     public void getUser(@Path("id") String id, Callback<UserResponse> callback);
 
+    //endregion
+
+    //region >> CLOUD RESOURCES
+
     /**
      * Synchronously gets a cloud by ID
      *
@@ -63,6 +71,10 @@ public interface V1 {
      */
     @GET("/clouds/{id}.json")
     public void getCloud(@Path("id") String id, Callback<CloudResponse> callback);
+
+    //endregion
+
+    //region >> DROP RESOURCES
 
     /**
      * Synchronously gets drops for a cloud
@@ -84,6 +96,8 @@ public interface V1 {
     public void getDropsForCloud(@Path("id") String id,
                                  Callback<DropResponse> callback);
 
+    //endregion
+
     public class Builder {
 
         public V1 build(final String internalToken) {
@@ -104,10 +118,12 @@ public interface V1 {
                     return headers;
                 }
             };
-            RestAdapter adapter = new RestAdapter.Builder()
-                    .setConverter(new GsonConverter(gson)).setServer(BASE_URL)
-                    .setRequestHeaders(headers).build();
-            return adapter.create(V1.class);
+            return new RestAdapter.Builder()//
+                    .setConverter(new GsonConverter(gson))//
+                    .setServer(BASE_URL)//
+                    .setRequestHeaders(headers)//
+                    .build()//
+                    .create(V1.class);
         }
     }
 }
