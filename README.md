@@ -1,6 +1,5 @@
-
-# ![CloudsdaleApp](https://secure.gravatar.com/avatar/006b4dec507eaac9967970a1cd967167?s=22) Cloudsdale for Java Clients
-=====
+# ![CloudsdaleApp](https://secure.gravatar.com/avatar/006b4dec507eaac9967970a1cd967167?s=48) Cloudsdale for Java Clients
+*****
 
 [![Build Status](https://travis-ci.org/cloudsdaleapp/Cloudsdale-Java.png)](https://travis-ci.org/cloudsdaleapp/Cloudsdale-Java)
 
@@ -8,7 +7,11 @@
 Cloudsdale for Java is built using [Square](http://square.github.io)'s [Retrofit](http://square.github.io/retrofit) and [OkHttp](http://square.github.io/okhttp), as well as [Berwyn](http://berwyn.github.io)'s [faye.java](http://github.com/berwyn/faye.java) client
 
 ## Requirements
- - JavaSE 1.6+ or Android 2.3+ (API >= 7)
+ - JavaSE 1.6+
+
+    or
+
+ - Android 2.3+ (API >= 7)
 
 ## Getting Started
 
