@@ -25,7 +25,7 @@ import com.google.gson.GsonBuilder;
  * 
  * @author Berwyn Codeweaver <berwyn.codeweaver@gmail.com>
  */
-public interface Api {
+public interface Cloudsdale {
 
     String BASE_URL = "http://www.cloudsdale.org/v1";
 
@@ -197,7 +197,7 @@ public interface Api {
 
     public class Builder {
 
-        public Api build(final String internalToken) {
+        public Cloudsdale build(final String internalToken) {
             Gson gson = new GsonBuilder()
                     .setDateFormat("yyyy/MM/dd HH:mm:ss Z").create();
             RequestHeaders headers = new RequestHeaders() {
@@ -224,7 +224,7 @@ public interface Api {
             RestAdapter adapter = new RestAdapter.Builder()
                     .setConverter(new GsonConverter(gson)).setServer(BASE_URL)
                     .setRequestHeaders(headers).build();
-            return adapter.create(Api.class);
+            return adapter.create(Cloudsdale.class);
         }
     }
 }

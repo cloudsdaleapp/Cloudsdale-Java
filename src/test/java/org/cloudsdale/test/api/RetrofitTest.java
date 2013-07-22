@@ -2,15 +2,10 @@ package org.cloudsdale.test.api;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 import junit.framework.TestCase;
 
-import org.cloudsdale.Api;
-import org.cloudsdale.models.Cloud;
-import org.cloudsdale.models.Drop;
-import org.cloudsdale.responses.CloudResponse;
-import org.cloudsdale.responses.DropResponse;
+import org.cloudsdale.Cloudsdale;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,12 +14,8 @@ import org.junit.runners.JUnit4;
 import retrofit.Profiler;
 import retrofit.RestAdapter;
 import retrofit.client.Client;
-import retrofit.client.Request;
-import retrofit.client.Response;
 
 import java.io.IOException;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA. User: Berwyn Codeweaver Date: 14/06/13 Time:
@@ -39,7 +30,7 @@ public class RetrofitTest extends TestCase {
 	private static final String	DEBUG_USER_ID			= "awesome user id";
 	private static final String	DEBUG_CLOUD_SHORTNAME	= "awesome cloud id";
 
-	private Api					cloudsale;
+	private Cloudsdale cloudsale;
 	private Client				mockClient;
 	private Profiler<Object>	mockProfiler;
 
@@ -50,7 +41,7 @@ public class RetrofitTest extends TestCase {
 		cloudsale = new RestAdapter.Builder().setClient(mockClient)
 				.setProfiler(mockProfiler)
 				.setServer("https://www.cloudsdale.org").build()
-				.create(Api.class);
+				.create(Cloudsdale.class);
 	}
 
 	@Test
